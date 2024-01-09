@@ -1,0 +1,312 @@
+/*Header*/
+@use 'mixins' as m;
+.header {
+    background-color: $verde;
+    @include m.tablet {
+        &.fijo {
+            position: fixed;
+            width: 100%;
+            box-shadow: .1rem .2rem .3rem #333;
+        }
+    }
+    
+
+    h1{
+        color: $blanco;
+        text-align: center;
+        @include m.tablet {
+            margin: 0;
+        }
+    }
+    .contenido-header{
+        padding: 2rem;
+        @include m.tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+.navegacion-princial{
+
+    @include m.tablet {
+        display: flex;
+        gap: 2rem;
+    }
+    a{
+        display: block;//para que ocupe todo el ancho
+        text-align: center;
+        color: $blanco;
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+        @include m.tablet {
+            margin: 0;
+        }
+
+        &:hover{
+            color: $amarillo;
+        }
+    }
+}
+/*Video */
+.video{
+    position: relative;//para que el video se posicione en el contenedor
+    max-height: 50rem;
+    
+    overflow: hidden;//para que el video no se salga del contenedor
+    .overlay {
+        position: absolute;//para que el video se posicione en el contenedor
+        background: rgb(193,0,255);
+        background: linear-gradient(270deg, rgba(193,0,255,0.5) 0%, rgba(255,0,217,0.3) 100%);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    video {
+        width: auto;
+        display: block;
+        @include m.tablet {
+            width: 100%;
+            
+        }
+    }
+}
+.contenido-video{
+    z-index: 10;//para que el contenido se posicione encima del video
+    h2{
+        color: $blanco;
+        font-size: 7rem;
+        margin: 0;
+    }
+    p{
+        background-color: $rosa;
+        display: inline-block;//para que el texto se ajuste al ancho
+        padding: 1rem 2rem;
+        color: $blanco;
+        font-weight: 700;
+        font-size: 2.4rem;
+        margin: 0;
+    }
+}
+/*contenido festival*/
+.sobre-festival {
+    padding: 5rem 0;
+    @include m.tablet {
+        @include m.grid(2,5rem);
+        
+    }
+}
+.contenido-festival {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5rem;
+    @include m.tablet {
+        margin: 0;
+        
+    }
+    h2{
+        margin-bottom: 2rem;
+    }
+
+    .fecha {
+        color: $rosa;
+        font-weight: 700;
+    }
+}
+/*line up*/
+.lineup {
+    background-color: $rosa;
+    padding: 5rem 0;
+    h3,p {
+        text-align: center;
+        color: $blanco;
+    }
+    .dia {
+        text-transform: uppercase;
+        margin-bottom: 5rem 0;
+    }
+}
+.escenarios-contenedor {
+    @include m.tablet {
+        @include m.grid(2,5rem);
+        
+    }
+    p {
+        color: $negro;
+    }
+    .escenario {
+        padding-top: 2rem;
+        p {
+            &::after {
+                content: '';
+                display: block;
+                width: 20rem;
+                height: 10rem;
+                background-size: 15rem;//para que la imagen se ajuste al ancho
+                background-repeat: no-repeat;
+                background-position: center center;
+                margin: 2rem auto 0 auto;
+            }
+        }
+    }
+}
+.edm .nombre-escenario:after {
+    background-image: url(/img/icono_edm.png);
+}
+.rock .nombre-escenario:after {
+    background-image: url(/img/icono_rock.png);
+}
+.bg-amarillo {
+    background-color: $amarillo;
+
+    li:nth-child(odd) {
+        background-color: darken($amarillo, 15%);
+    }
+}
+.bg-verde {
+    background-color: $verde;
+    li:nth-child(odd) {
+        background-color: darken($verde, 10%);
+    }
+}
+.calendario {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+        padding: 2.5rem;
+        font-weight: 700;
+        span {
+            font-weight: 400;
+        }
+    }
+}
+/*galeria*/
+.galeria {
+    padding: 5rem 0;
+    
+    h3{
+        text-align: center;
+        
+    }
+}
+.galeria-imagenes {
+   margin: 0;
+   padding: 0;
+   @include m.grid(2,2rem);
+   @include m.telefono {
+       @include m.grid(3,2rem);
+   }
+   @include m.tablet {
+       @include m.grid(4,2rem);
+    
+   }
+   @include m.desktop {
+       @include m.grid(6,2rem);
+    
+   }
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;//para que el contenido se posicione en el centro
+    background-color: rgba(0,0,0,.5);
+    picture {
+        display: block;
+        max-width: 80rem;
+
+    }
+}
+.btn-cerrar {
+    color: $negro;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-color: $blanco;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    &:hover {
+        cursor: pointer;
+    }
+
+}
+.boletos {
+    padding: 5rem 0;
+    h3 {
+        text-align: center;
+        color: $blanco;
+        margin-bottom:3rem; 
+    }
+    .contenedor-boleto {
+        @include m.tablet {
+            @include m.grid(2,5rem);
+            
+        }
+    }
+}
+.pase {
+
+    .nombre-pase {
+        text-align: center;
+        color: $blanco;
+        font-size: 2.8rem;
+    }
+    
+    .pase-header{
+        padding: .5rem;
+        background-color: $rosa;
+        p {
+            text-align: center;
+            color:$blanco;
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+        }
+    }
+    .pase-body {
+        background-color: $blanco;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            
+            li,
+            :nth-child(odd) {
+                background-color: $blanco;
+                padding: 1rem;
+                border-bottom: 1px solid $gris;
+            }
+        }
+       
+    }
+    .pase-footer {
+        background-color: $morado;
+        padding: .8rem;
+        p {
+            text-align: center;
+            color:$blanco;
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+    }
+}
+.site-footer{
+    background-color: $rosa;
+    padding: 1rem;
+    p {
+        margin: 0;
+        text-align: center;
+        color: $blanco;
+    }
+}

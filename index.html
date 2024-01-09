@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock & EDM Festival</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor contenido-header">
+            <h1>Rock & EDM Festival</h1>
+
+            <nav class="navegacion-princial">
+                <a href="#lineup">Line Up</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#boletos">Boletos</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="video">
+        <div class="overlay">
+            <div class="contenedor contenido-video">
+                <h2>Rock & EDM Festival</h2>
+                <p>Enero 2024, Los Andes, Chile.</p>
+            </div>
+        </div>
+        <video autoplay muted loop>
+            <source src="video/concierto.mp4" type="video/mp4">
+            <source src="video/concierto.ogg" type="video/ogg"> 
+            <source src="video/concierto.webm" type="video/webm">
+        </video>
+    </div>
+    <section class="contenedor sobre-festival">
+        <div class="imagen">
+            <img src="/img/imagen_vocalista.webp" alt="imagen vocalista festival">
+        </div>
+        <div class="contenido-festival">
+            <h2><span>Rock & EDM Festival</span></h2>
+            <p class="fecha">Enero 2024, Los Andes, Chile</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam dolor officiis assumenda, officia possimus quis quas ex sit quisquam praesentium. Dolor amet libero ullam neque facilis, quisquam voluptas? Explicabo, saepe!</p>
+        </div>
+    </section>
+    
+    <section id="lineup" class="lineup"> 
+        <h3>Line Up</h3>
+
+        <p class="dia">Viernes 12</p>
+        <div class="escenarios-contenedor contenedor">
+            <div class="escenario rock bg-amarillo">
+                <p class="nombre-escenario">Escenario Rock</p>
+                <ul class="calendario">
+                    <li>
+                        22:00 | <span>Los Cebollines</span>
+                    </li>
+                    <li>
+                        23:00 | <span>Los Malvekes</span>
+                    </li>
+                    <li>
+                        00:00 | <span>Callampin Bombin</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="escenario edm bg-verde">
+                <p class="nombre-escenario">Escenario EDM</p>
+                <ul class="calendario">
+                    <li>
+                        22:00 | <span>Los Choro-Galaxia</span>
+                    </li>
+                    <li>
+                        23:00 | <span>Loco Rene</span>
+                    </li>
+                    <li>
+                        00:00 | <span>Huevito Rey</span>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+        <p class="dia">Sabado 13</p>
+        <div class="escenarios-contenedor contenedor">
+            <div class="escenario rock bg-verde">
+                <p class="nombre-escenario">Escenario Rock</p>
+                <ul class="calendario">
+                    <li>
+                        22:00 | <span>BTS</span>
+                    </li>
+                    <li>
+                        23:00 | <span>Dios JK</span>
+                    </li>
+                    <li>
+                        00:00 | <span>Larvaneitor</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="escenario edm bg-amarillo">
+                <p class="nombre-escenario">Escenario EDM</p>
+                <ul class="calendario">
+                    <li>
+                        22:00 | <span>Wolas</span>
+                    </li>
+                    <li>
+                        23:00 | <span>El pollito Pio</span>
+                    </li>
+                    <li>
+                        00:00 | <span>Alo-sushi</span>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="galeria" class="galeria contenedor">
+        <h3>Galeria</h3>
+        <ul class="galeria-imagenes">
+
+        </ul>
+    </section>
+    <section id="boletos" class="boletos bg-verde">
+        <h3>Boletos</h3>
+        <div class="contenedor contenedor-boleto">
+            <div class="basico pase">
+                <p class="nombre-pase">Pase 1 Dia</p>
+                <header class="pase-header">
+                    <p>Incluye</p>
+                </header>
+                <div class="pase-body">
+                    <ul>
+                        <li>Acceso a ambos escenarios</li>
+                        <li>Comida y Bebida</li>
+                    </ul>
+                </div>
+                <footer class="pase-footer">
+                    <p>$100</p>
+                </footer>
+            </div>
+            <div class="premiun pase">
+                <p class="nombre-pase">Pase 2 dias</p>
+                <header class="pase-header">
+                    <p>Incluye</p>
+                </header>
+                <div class="pase-body">
+                    <ul>
+                        <li>Acceso a ambos escenarios</li>
+                        <li>Comida y Bebida</li>
+                        <li>Camisa del Evento</li>
+                        <li>Acesso Vip</li>
+                    </ul>
+                </div>
+                <footer class="pase-footer">
+                    <p>$200</p>
+                </footer>
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <p>Rock & EDM Festival. Derechos Reservados @NEOCHOCAPIC</p>
+    </footer>
+    
+
+<script src="/Js/galeria.js"></script>
+</body>
+</html>
